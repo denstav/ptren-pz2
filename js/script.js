@@ -1,8 +1,9 @@
+//modal -1
 let popupСall = document.querySelector('.popup-call')
 let openPopupСall = document.querySelectorAll('.call-btn')
 let closePopupCall = document.querySelector('.popup-close')
 
-console.log(closePopupCall)
+
 
 openPopupСall.forEach(element => {
     element.addEventListener('click', function () {
@@ -19,7 +20,7 @@ closePopupCall.addEventListener('click', function (event) {
     }
 })
 
-
+//modal -2
 let closePopupCheck = document.querySelector('.check-close')
 let popupCheck = document.querySelector('.popup-check')
 let openCheckBtn = document.querySelector('.check-btn')
