@@ -20,6 +20,7 @@ closePopupCall.addEventListener('click', function (event) {
 })
 
 
+let closePopupCheck = document.querySelector('.check-close')
 let popupCheck = document.querySelector('.popup-check')
 let openCheckBtn = document.querySelector('.check-btn')
 openCheckBtn.addEventListener('click', function () {
@@ -27,7 +28,7 @@ openCheckBtn.addEventListener('click', function () {
 })
 
 
-closePopupCall.addEventListener('click', function (event) {
+closePopupCheck.addEventListener('click', function (event) {
     event.preventDefault()
     popupCheck.style.display = 'none'
 })
