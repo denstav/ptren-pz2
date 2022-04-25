@@ -1,25 +1,36 @@
-//modal -1
-
-let popupСall = document.querySelector('.popup-call')
-let openPopupСall = document.querySelectorAll('.call-btn')
-let closePopupCall = document.querySelector('.popup-close')
-
-openPopupСall.forEach(element => {
-    element.addEventListener('click', function () {
-        popupСall.style.display = 'flex'
-    })
+let popupСall = document.querySelector(".popup-call");
+let openPopupСall = document.querySelectorAll(".call-btn");
+openPopupСall.forEach((element) => {
+  element.addEventListener("click", function () {
+    popupСall.style.display = "flex";
+  });
 });
 
-let popupCheck = document.querySelector('.popup-check')
-let openCheckBtn = document.querySelector('.check-btn')
-    openCheckBtn.addEventListener('click', function () {
-        popupCheck.style.display = 'flex'
-    })
+let popupDiscount = document.querySelector('.popup-discount')
+let openForm = document.querySelectorAll(".button");
 
-    closePopupCall.addEventListener('click', function (event) {
-        event.preventDefault()
-        popupСall.style.display = 'none'
+openForm.forEach((element) => {
+    element.addEventListener("click", function () {
+        popupDiscount.style.display = "flex";
+    });
+  });
+
+let popupCheck = document.querySelector('.popup-check')
+let openCheckBtn = document.querySelector(".check-btn");
+openCheckBtn.addEventListener('click', function(){
+    popupCheck.style.display = "flex";
+})
+
+const popups = document.querySelectorAll('.popup')
+
+for (const popupEl of popups) {
+  for (const popupCloseEl of popupEl.querySelectorAll('.popup-close')) {
+    popupCloseEl.addEventListener('click', e => {
+      popupEl.style.display = 'none'
     })
+  }
+}
+
 
 //Аккордеон
 const accordion = document.querySelectorAll('.panel-group');
@@ -38,17 +49,3 @@ accordion.forEach((accordionEvent) => {
     })
 })
 
-
-window.addEventListener('click', function(event){
-    
-    
-    
-    
-    
-    //modal -2
-    
-    
-    
-    
-    
-})
