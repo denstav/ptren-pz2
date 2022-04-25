@@ -1,13 +1,5 @@
 //modal -1
 
-let btns = document.querySelectorAll('.popup')
-console.log(btns)
-for (let i = 0; i < btns.length; i++) {
-    btns[i].addEventListener('click',function(){
-        let name  = btns[i].getAttribute('data-model-btn')
-    })
-    
-}
 let popupСall = document.querySelector('.popup-call')
 let openPopupСall = document.querySelectorAll('.call-btn')
 let closePopupCall = document.querySelector('.popup-close')
@@ -22,6 +14,11 @@ let popupCheck = document.querySelector('.popup-check')
 let openCheckBtn = document.querySelector('.check-btn')
     openCheckBtn.addEventListener('click', function () {
         popupCheck.style.display = 'flex'
+    })
+
+    closePopupCall.addEventListener('click', function (event) {
+        event.preventDefault()
+        popupСall.style.display = 'none'
     })
 
 //Аккордеон
@@ -52,9 +49,6 @@ window.addEventListener('click', function(event){
     
     
     
-    closePopupCall.addEventListener('click', function (event) {
-        event.preventDefault()
-        popupCheck.style.display = 'none'
-    })
+    
     
 })
