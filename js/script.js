@@ -1,5 +1,13 @@
 //modal -1
 
+let btns = document.querySelectorAll('.popup')
+console.log(btns)
+for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener('click',function(){
+        let name  = btns[i].getAttribute('data-model-btn')
+    })
+    
+}
 let popupСall = document.querySelector('.popup-call')
 let openPopupСall = document.querySelectorAll('.call-btn')
 let closePopupCall = document.querySelector('.popup-close')
@@ -38,11 +46,7 @@ window.addEventListener('click', function(event){
     
     
     
-    closePopupCall.addEventListener('click', function (event) {
-        event.preventDefault()
-        popupСall.style.display = 'none'
     
-    })
     
     //modal -2
     
