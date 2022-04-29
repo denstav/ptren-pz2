@@ -7,7 +7,7 @@ openPopupСall.forEach((element) => {
 });
 
 let popupDiscount = document.querySelector('.popup-discount')
-let openForm = document.querySelectorAll(".button");
+let openForm = document.querySelectorAll(".capture-form-btn");
 
 openForm.forEach((element) => {
     element.addEventListener("click", function () {
